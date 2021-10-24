@@ -114,9 +114,9 @@ class Action {
         })
     }
 
-    run() {
+    run() {  
         if (!this.projectFile || !fs.existsSync(this.projectFile))
-            this._printErrorAndExit("project file not found")
+            this._printErrorAndExit("project file " + "path is: " + __dirname + this.projectFile + " not found")
 
         console.log(`Project Filepath: ${this.projectFile}`)
 
